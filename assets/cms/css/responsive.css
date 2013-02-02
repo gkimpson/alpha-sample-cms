@@ -1,0 +1,397 @@
+/*
+ * MWS Admin v2.0.2 - Media Queries Stylesheet
+ * This file is part of MWS Admin, an Admin template build for sale at ThemeForest.
+ * All copyright to this file is hold by Mairel Theafila <maimairel@yahoo.com> a.k.a nagaemas on ThemeForest.
+ * Last Updated:
+ * October 21, 2012
+ *
+ */
+
+@media only screen and (max-width: 1024px) {
+    #mws-navigation ul li a, 
+    #mws-navigation ul li span {
+        margin: 0 !important;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    #mws-sidebar, 
+    #mws-sidebar-bg {
+        width: 100px;
+    }
+
+    #mws-container {
+        margin-left: 100px;
+    }
+
+    #mws-sidebar-stitch {
+        left: 91px;
+    }
+
+    #mws-searchbox {
+        margin: 0 10px 10px 6px;
+        padding: 3px;
+    }
+
+    #mws-searchbox .mws-search-input {
+        width: 45px;
+        padding: 1px;
+        font-size: 11px;
+        line-height: 19px;
+    }
+
+    #mws-searchbox .mws-search-submit {
+        margin-left: 58px;
+        width: 20px;
+        height: 20px;
+    }
+
+    #mws-navigation ul li a, 
+    #mws-navigation ul li span {
+        text-align: center;
+        padding: 11px 4px;
+        margin: 0;
+    }
+
+    #mws-navigation ul li a [class*="icon-"], 
+    #mws-navigation ul li span [class*="icon-"] {
+        display: block;
+        width: 100%;
+        margin: 0 0 4px 0;
+        text-align: center;
+    }
+
+    #mws-navigation ul li ul li a, 
+    #mws-navigation ul li ul li span {
+        padding: 4px 0;
+        text-align: center;
+    }
+
+    #mws-navigation ul li span.mws-nav-tooltip {
+        font-size: 11px;
+        position: absolute;
+        line-height: 16px;
+        margin: 0;
+        right: auto;
+        left: 60%;
+        top: -4px;
+        background: #c00;
+        z-index: 99999;
+        height: 16px;
+        min-width: 12px;
+        padding: 0 2px;
+        color: #ffffff !important;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    #mws-footer {
+        left: 106px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .mws-form .mws-form-inline .mws-form-label, 
+    .mws-form .mws-form-inline .mws-form-item {
+        display: block;
+        width: 100%;
+        margin: 0;
+        float: none;
+    }
+
+    .mws-form .mws-form-inline .mws-form-label {
+        padding-top: 0;
+    }
+
+    .mws-form .mws-form-inline .mws-form-list {
+        float: none;
+        width: auto;
+        display: block;
+    }
+
+    .mws-form .mws-form-list.inline li {
+        float: none;
+        margin-right: 0;
+    }
+
+    .mws-stat {
+        width: 100%;
+        height: 60px;
+        margin: 8px 0;
+    }
+
+    .mws-stat .mws-stat-content .mws-stat-value {
+        font-size: 21px;
+        line-height: 32px;
+    }
+
+    .mws-stat .mws-stat-content .mws-stat-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+    }
+}
+
+@media only screen and (max-width : 599px) {
+    #mws-logo-container {
+        float: none;
+        display: block;
+        width: auto;
+        height: 40px;
+        background: url(../images/core/mws-dark-bg.png) repeat;
+    }
+
+    #mws-logo-container #mws-logo-wrap {
+        width: 100px;
+        height: 40px;
+    }
+
+    #mws-logo-container #mws-logo-wrap img {
+        max-width: 100px;
+        max-height: 40px;
+    }
+
+    #mws-sidebar {
+        float: none;
+        width: 100%;
+        -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    #mws-header {
+        height: auto;
+        border-top: 4px solid;
+        border-bottom: 0;
+        background-position: left 40px;
+    }
+
+    #mws-header #mws-user-tools {
+        margin: auto;
+        padding: 6px 0;
+    }
+
+    #mws-header #mws-user-info, 
+    #mws-header #mws-user-tools {
+        float: none;
+        width: auto;
+    }
+
+    #mws-header #mws-user-info {
+        margin: 0;
+    }
+
+    #mws-user-tools .mws-dropdown-menu {
+        margin: 4px 6px 0 6px;
+    }
+
+    #mws-user-tools .mws-dropdown-menu .mws-dropdown-box {
+        left: 0;
+        -webkit-border-radius: 0 6px 6px 6px;
+        -moz-border-radius: 0 6px 6px 6px;
+        border-radius: 0 6px 6px 6px;
+    }
+
+    #mws-container {
+        font-size: 0.9em !important;
+    }
+
+    #mws-container .container {
+        float: left;
+        margin: 0 2%;
+        width: 96%;
+    }
+
+    #mws-sidebar {
+        position: relative;
+        top: auto;
+        padding-top: 8px;
+    }
+
+    #mws-sidebar-stitch, 
+    #mws-sidebar-bg {
+        display: none;
+    }
+
+    #mws-container {
+        margin-left: 0px;
+        padding-top: 16px;
+    }
+
+    #mws-footer {
+        left: auto;
+        right: auto;
+        clear: both;
+        width: 92%;
+    }
+
+    #mws-wrapper {
+        padding-top: 96px;
+        margin-top: -96px;
+    }
+
+    #mws-searchbox {
+        margin: 0 6px 0 40px;
+        z-index: 10;
+        position: relative;
+    }
+
+    #mws-searchbox form {
+        display: block;
+    }
+
+    #mws-nav-collapse {
+        display: inline-block;
+        float: left;
+        margin-left: 6px;
+        padding: 8px 6px;
+        cursor: pointer;
+        width: 16px; height: 12px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    #mws-nav-collapse span {
+        display: block;
+        border: solid #fff;
+        border-width: 1px 0;
+        width: 100%;
+        margin-bottom: 2px;
+
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+    #mws-navigation {
+        cursor: pointer;
+        width: 100%;
+        padding-top: 8px;
+    }
+
+    #mws-navigation.toggled {
+        padding-bottom: 8px;
+    }
+
+    #mws-navigation.toggled > ul {
+        display: block;
+    }
+
+    #mws-navigation > ul {
+        cursor: auto;
+        display: none;
+        width: 100%;
+    }
+
+    #mws-navigation ul li a, 
+    #mws-navigation ul li span {
+        padding: 8px 0;
+        text-align: left;
+    }
+
+    #mws-navigation ul li a [class*="icon-"], 
+    #mws-navigation ul li span [class*="icon-"] {
+        font-size: 16px;
+        vertical-align: top;
+        width: 16px; height: 16px;
+        text-align: center;
+    }
+
+    .mws-panel {
+        margin-bottom: 16px;
+    }
+
+    .mws-panel .mws-panel-content {
+        padding: 12px;
+    }
+
+    .mws-table {
+        table-layout: fixed;
+    }
+
+    .mws-table thead tr th {
+        padding: 10px 2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .mws-table tbody td, 
+    .mws-table tfoot td {
+        padding: 8px;
+    }
+
+    .dataTables_wrapper .dataTables_length, 
+    .dataTables_wrapper .dataTables_filter {
+        display: block;
+        float: none;
+        width: auto;
+        background-color: #cccccc;
+        text-align: left;
+    }
+
+    .dataTables_wrapper .dataTables_paginate {
+        margin: 10px 8px;
+    }
+
+    .mws-form .mws-form-row {
+        padding: 16px 12px;
+    }
+
+    .mws-form .mws-button-row {
+        padding: 6px 8px;
+    }
+
+    .mws-form-message {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-position: 12px 7px;
+    }
+
+    .mws-form-col-1-8, .mws-form-col-2-8, 
+    .mws-form-col-3-8, .mws-form-col-4-8, 
+    .mws-form-col-5-8, .mws-form-col-6-8,   
+    .mws-form-col-7-8, .mws-form-col-8-8 {
+        padding: 16px 6px;
+    }
+
+    .mws-form-cols {
+        padding: 0 12px;
+    }
+
+    #mws-login .mws-form .mws-form-row {
+        padding: 12px 0;
+    }
+
+    .mws-stat-container {
+        margin-bottom: 16px;
+    }
+
+    .plupload_header_text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    #mws-error-container {
+        background: none !important;
+    }
+
+    #mws-error-code {
+        padding: 0;
+        background: none !important;
+    }
+
+    #mws-error-code h1 {
+        color: #323232 !important;
+        margin-bottom: 0 !important;
+    }
+
+    #mws-themer {
+        display: none;
+    }
+}
