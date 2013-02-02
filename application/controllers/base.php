@@ -7,6 +7,8 @@ require_once APPPATH . 'third_party/debugging/dBug.php';
 class Base extends CI_Controller {
     public $var = array();
     public $data = array();
+    public $items = '';
+    public $items_text = '';
 
     function __construct()
     {
@@ -16,7 +18,36 @@ class Base extends CI_Controller {
 
     public function init()
     {
+        $this->load->model(array('site_settings_model', 'pages_model'));
+        $this->site = $this->site_settings_model->get_all_settings();
 
+        //$this->_get_page();
+    }
+
+    function _get_page($slug = NULL)
+    {
+        if (!$slug)
+        {
+            $slug = (base_url() !== current_url()) ? str_replace(base_url(), '', current_url()) : 'home';
+        }
+
+        $row = $this->pages_model->get_by(array('slug' => $slug));
+        $this->page_seo = (is_object($row)) ? $row : FALSE;
+
+        if (is_object($this->page_seo))
+        {
+            $params = array(
+                        'title'             => $row->page_title,
+                        'meta_description'  => $row->meta_description,
+                        'meta_keywords'     => $row->meta_keywords,
+                        'h1'                => $row->h1,
+                        'content'           => $row->content,
+                        );
+            $this->_set_page_defaults($params);
+
+            $data = array();
+            $this->renderPage(NULL,$data,TRUE,TRUE);
+        }
     }
 
     public function renderPage($file, $data, $common = FALSE)
@@ -33,11 +64,13 @@ class Base extends CI_Controller {
         }
 
         echo $header;
+
         if ($file != NULL)
         {
             $content    = $this->load->view("{$file}", $data, TRUE);
             echo $content;
         }
+
         echo $footer;
     }
 
@@ -45,34 +78,18 @@ class Base extends CI_Controller {
      * Send email
      * @param   array   $params
      * @param   array   $config
-     * @param   boolean $sendmail
      * @param   boolean $debug
      * @return  void
     **/
-    public function _send_email($params = array(), $config = array(), $sendmail = FALSE, $debug = FALSE)
+    public function _send_email($params = array(), $debug = FALSE)
     {
         $this->load->library('email');
 
-        if ($sendmail == TRUE)
-        {
-            $config['protocol']     = 'sendmail';
-            $config['mailpath']     = '/usr/sbin/sendmail';
-            $config['charset']      = 'iso-8859-1';
-            $config['wordwrap']     = TRUE;
-        } else {
-            $config['protocol']     = 'smtp';
-            $config['smtp_host']    = 'mail.cogent-x.net';
-            $config['smtp_user']    = 'test.relay@cogent-x.net';
-            $config['smtp_pass']    = 'nbmg5vlf';
-            $config['smtp_port']    = 25;
-        }
-
-        if (count($config) > 0)
-        {
-            $this->email->initialize($config);
-        }
-
-        $this->email->clear();
+        $config['protocol']     = 'sendmail';
+        $config['mailpath']     = '/usr/sbin/sendmail';
+        $config['charset']      = 'iso-8859-1';
+        $config['wordwrap']     = TRUE;
+        $this->email->initialize($config);
 
         if (array_key_exists('from_email', $params) && array_key_exists('from_name', $params))
             $this->email->from($params['from_email'], $params['from_name']);
@@ -109,9 +126,9 @@ class Base extends CI_Controller {
         $this->email->send();
 
         if ($debug == TRUE)
-        {
             echo $this->email->print_debugger();
-        }
+
+        $this->email->clear();
     }
 
     protected function _set_page_defaults()
@@ -119,7 +136,7 @@ class Base extends CI_Controller {
         $params = func_get_args();
 
         $this->page = new StdClass;
-        $this->page->page_name = (isset($params[0]['page_name'])) ? $params[0]['page_name'] : '';
+        $this->page->title = (isset($params[0]['title'])) ? $params[0]['title'] : '';
         $this->page->meta_description = (isset($params[0]['meta_description'])) ? $params[0]['meta_description'] : '';
         $this->page->meta_keywords = (isset($params[0]['meta_keywords'])) ? $params[0]['meta_keywords'] : '';
         $this->page->h1 = (isset($params[0]['h1'])) ? $params[0]['h1'] : '';

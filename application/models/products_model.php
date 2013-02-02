@@ -10,7 +10,7 @@ class Products_Model extends My_Model
 		parent::__construct();
 	}
 
-	function get_all()
+	function get_all_items()
 	{
 		$this->db->select('products.*, categories.title AS category');
 		$this->db->join('categories', 'categories.id = products.category_id');

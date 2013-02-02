@@ -54,9 +54,9 @@ class Page {
 	 */
 	function _load_template($data)
 	{
-		$this->header	= $this->ci->load->view('templates/logical/common-header', $data, true);
+		$this->header	= $this->ci->load->view('templates/common-header', $data, true);
         //$this->nav      = $this->ci->load->view('admin/nav', $data, true);
-		$this->footer	= $this->ci->load->view('templates/logical/common-footer', $data, true);
+		$this->footer	= $this->ci->load->view('templates/common-footer', $data, true);
 	}
 
 	/**

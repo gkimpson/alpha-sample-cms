@@ -23,7 +23,8 @@ class Categories extends Base {
             show_404();
         }
 
-        $this->data['product'] = $this->_id_check($id);
+        $this->data['category'] = $this->_id_check($id);
+        krumo($this->data['category']);
         $this->renderPage('categories/view', $this->data, TRUE);
     }
 
