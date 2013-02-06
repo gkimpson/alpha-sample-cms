@@ -39,7 +39,7 @@
                               <div class="mws-form-row">
                                   <label class="mws-form-label">Current Image (Large)</label>
                                   <div class="mws-form-item small">
-                                      <? if (file_exists('uploads/products/product-'. $id .'.jpg')) { ?>
+                                      <? if (isset($id) && file_exists('uploads/products/product-'. $id .'.jpg')) { ?>
                                       <img src="<?= base_url() ?>uploads/products/product-<?= $id ?>.jpg" alt="Product Image">
                                       <? } else { ?>
                                       No image
@@ -50,7 +50,7 @@
                               <div class="mws-form-row">
                                   <label class="mws-form-label">Current Image (Small)</label>
                                   <div class="mws-form-item small">
-                                    <? if (file_exists('uploads/products/product-'. $id .'-thumb.jpg')) { ?>
+                                    <? if (isset($id) && file_exists('uploads/products/product-'. $id .'-thumb.jpg')) { ?>
                                       <img src="<?= base_url() ?>uploads/products/product-<?= $this->uri->segment(4) ?>-thumb.jpg" alt="Product Image">
                                     <? } else { ?>
                                     No image
