@@ -1,6 +1,6 @@
             <!-- Footer -->
             <div id="mws-footer">
-                Copyright Your Website <?= date('Y') ?>. All Rights Reserved.
+                Copyright <?= $this->site->website_name ?> <?= date('Y') ?>. All Rights Reserved.
             </div>
 
         </div>

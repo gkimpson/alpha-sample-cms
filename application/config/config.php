@@ -14,7 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url']	= ($_SERVER['HTTP_HOST'] == 'localhost') ?  "http://localhost/alphaworkwear-direct/" : 'http://www.phpstuff.co.uk/';
+//$config['base_url']	= ($_SERVER['HTTP_HOST'] == 'localhost') ?  "http://localhost/alphaworkwear-direct/" : 'http://www.phpstuff.co.uk/';
+$config['base_url']	= ($_SERVER['HTTP_HOST'] == 'localhost') ?  "http://localhost/alphaworkwear-direct/" : 'http://alphawd.co.uk/';
 
 /*
 |--------------------------------------------------------------------------

@@ -109,7 +109,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('config_model');
+$autoload['model'] = array('config_model', 'site_settings_model');
 
 
 /* End of file autoload.php */

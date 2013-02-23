@@ -29,7 +29,7 @@ class Products extends Auth
     function index()
     {
         $data = array();
-        $data['items'] = $this->products_model->get_all();
+        $data['items'] = $this->products_model->get_all_items();
         $data['items_count'] = count($data['items']);
         $this->display_statistics('box1', 'Number of Products', $data['items_count']);
         Page::factory('admin/'. $this->module .'/index', $data)->render();

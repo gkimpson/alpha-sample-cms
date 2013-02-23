@@ -10,12 +10,15 @@ class Base extends CI_Controller
     function __construct()
 	{
 		parent::__construct();
+
+		$this->site = $this->site_settings_model->get_all_settings();
 	}
 
-	function display_statistics($box, $title, $value)
+	function display_statistics($box, $title, $value, $icon = 'icol32-layout')
 	{
 		$this->statistics->{$box}->title = $title;
 		$this->statistics->{$box}->value = $value;
+		$this->statistics->{$box}->icon = $icon;
 	}
 
 }

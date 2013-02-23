@@ -58,9 +58,15 @@ if ($_SERVER['HTTP_HOST'] == 'localhost')
 else
 {
 	$db['default']['hostname'] = 'localhost';
-	$db['default']['username'] = 'ldoxzdde_awd';
-	$db['default']['password'] = 'c?-KRe5H90l%';
-	$db['default']['database'] = 'ldoxzdde_awd';
+	$db['default']['username'] = 'kkaaqfbs_awd';
+	$db['default']['password'] = 'zJB#Zr7C~MpFX95V';
+	$db['default']['database'] = 'kkaaqfbs_awd';
+
+	// phpstuff.co.uk
+	// $db['default']['hostname'] = 'localhost';
+	// $db['default']['username'] = 'ldoxzdde_awd';
+	// $db['default']['password'] = 'c?-KRe5H90l%';
+	// $db['default']['database'] = 'ldoxzdde_awd';
 }
 
 $db['default']['dbdriver'] = 'mysql';

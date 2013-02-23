@@ -38,14 +38,16 @@
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/cms/plugins/ibutton/jquery.ibutton.css" media="screen" />
 <? } ?>
 
-<script type="text/javascript" src="<?= base_url() ?>assets/cms/js/libs/jquery-1.8.2.min.js"></script>
+<!--<script type="text/javascript" src="<?= base_url() ?>assets/cms/js/libs/jquery-1.8.2.min.js"></script>-->
+<script type="text/javascript" src="<?= base_url() ?>assets/cms/js/libs/jquery-1.9.1.min.js"></script>
 
-<title>AWD CMS</title>
+<title><?= $this->site->website_name ?> CMS</title>
 
 </head>
 
 <body>
 
+    <? /*
     <!-- Themer (Remove if not needed) -->
     <div id="mws-themer">
         <div id="mws-themer-content">
@@ -87,6 +89,7 @@
         </div>
     </div>
     <!-- Themer End -->
+    */ ?>
 
     <!-- Header -->
     <div id="mws-header" class="clearfix">
@@ -166,10 +169,10 @@
 
             <!-- Messages -->
             <div id="mws-user-message" class="mws-dropdown-menu">
-                <a href="<?= base_url() ?>assets/cms/#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-envelope"></i></a>
+                <? /*<a href="<?= base_url() ?>assets/cms/#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-envelope"></i></a>*/ ?>
 
                 <!-- Unred messages count -->
-                <span class="mws-dropdown-notif">35</span>
+                <? /*<span class="mws-dropdown-notif">35</span>*/ ?>
 
                 <!-- Messages dropdown -->
                 <div class="mws-dropdown-box">
@@ -177,7 +180,7 @@
                         <ul class="mws-messages">
                             <li class="read">
                                 <a href="<?= base_url() ?>assets/cms/#">
-                                    <span class="sender">John Doe</span>
+                                    <span class="sender">#name#</span>
                                     <span class="message">
                                         Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
                                     </span>
@@ -231,19 +234,19 @@
             <div id="mws-user-info" class="mws-inset">
 
                 <!-- User Photo -->
-                <div id="mws-user-photo">
+                <? /*<div id="mws-user-photo">
                     <img src="<?= base_url() ?>assets/cms/example/profile.jpg" alt="User Photo" />
-                </div>
+                </div>*/ ?>
 
                 <!-- Username and Functions -->
                 <div id="mws-user-functions">
                     <? if ($this->ion_auth->logged_in()) { ?>
                     <div id="mws-username">
-                        Hello, <?= $this->ion_auth->user()->row()->first_name ?> <?= $this->ion_auth->user()->row() ->last_name ?>;
+                        Hello <?= $this->ion_auth->user()->row()->first_name ?>
                     </div>
                     <ul>
-                        <li><a href="<?= base_url() ?>assets/admin/auth/#">Profile</a></li>
-                        <li><a href="<?= base_url() ?>assets/cms/#">Change Password</a></li>
+                        <? /*<li><a href="<?= base_url() ?>assets/admin/auth/#">Profile</a></li>*/ ?>
+                        <? /*<li><a href="<?= base_url() ?>assets/cms/#">Change Password</a></li>*/ ?>
                         <li><a href="<?= base_url() ?>admin/auth/logout">Logout</a></li>
                     </ul>
                     <? } ?>
@@ -270,12 +273,14 @@
             </div>
 
             <!-- Searchbox -->
+            <? /*
             <div id="mws-searchbox" class="mws-inset">
                 <form action="typography.html">
                     <input type="text" class="mws-search-input" placeholder="Search..." />
                     <button type="submit" class="mws-search-submit"><i class="icon-search"></i></button>
                 </form>
             </div>
+            */ ?>
 
             <!-- Main Navigation -->
             <div id="mws-navigation">
