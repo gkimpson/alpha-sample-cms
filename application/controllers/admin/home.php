@@ -23,7 +23,7 @@ class Home extends Auth
     function index()
     {
         $data = array();
-        /Page::factory('admin/home/dashboard', $data)->render();
+        Page::factory('admin/home/dashboard', $data)->render();
     }
 
     function dashboard()
