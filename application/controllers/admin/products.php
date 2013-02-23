@@ -59,7 +59,7 @@ class Products extends Auth
         Page::factory('admin/'. $this->module .'/edit', $data)->render();
     }
 
-    function eedit($id = NULL)
+    function _ck($id = NULL)
     {
         require_once '/ckeditor/ckeditor.php';
         $ckeditor = new CKEditor();
@@ -117,7 +117,7 @@ class Products extends Auth
     {
         if ($this->_validation())
         {
-            $form = elements(array('page_title', 'meta_description', 'meta_keywords', 'title', 'category_id', 'price', 'description'), $this->input->post(), NULL);
+            $form = elements(array('page_title', 'meta_description', 'meta_keywords', 'title', 'category_id', 'is_featured', 'price', 'description'), $this->input->post(), NULL);
             //krumo($form);exit;
 
             if (isset($_POST['id']))
@@ -170,7 +170,8 @@ class Products extends Auth
 
         $item = $this->products_model->get_row($id, "'categories', 'categories.id = products.category_id'");
         $this->products_model->delete($id);
-        $message = "Product deleted : $item->title";
+        $message = "Product deleted";
+        // krumo($message, $item->title);
         $this->session->set_flashdata('message', $message);
         redirect('/admin/products');
     }

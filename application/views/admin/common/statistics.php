@@ -2,6 +2,7 @@
                 <div class="mws-stat-container clearfix">
 
                     <!-- Statistic Item -->
+                    <? if (isset($this->statistics->box1)) { ?>
                     <a class="mws-stat" href="<?= base_url() ?>assets/cms/#">
                         <!-- Statistic Icon (edit to change icon) -->
                         <span class="mws-stat-icon <? if (isset($this->statistics->box1->icon)) echo $this->statistics->box1->icon ?>"></span>
@@ -12,6 +13,7 @@
                             <span class="mws-stat-value"><? if (isset($this->statistics->box1->value)) echo $this->statistics->box1->value ?></span>
                         </span>
                     </a>
+                    <? } ?>
 
                     <? /*
                     <a class="mws-stat" href="<?= base_url() ?>assets/cms/#">

@@ -45,7 +45,16 @@
                                       <? $item->category_id = (isset($item->category_id)) ? $item->category_id : ''; ?>
                                       <?= form_dropdown('category_id', $options['categories'], $item->category_id); ?>
                                       <?//= form_input('title', $item->title, 'class="required" title="Product Title" rel="tooltip" data-placement="right"'); ?>
-                                    </div>
+                                  </div>
+                              </div>
+
+                              <div class="mws-form-row">
+                                  <label class="mws-form-label">Is featured Product?</label>
+                                  <div class="mws-form-item small">
+                                      <? $item->is_featured = (isset($item->is_featured)) ? $item->is_featured : ''; ?>
+                                      <?= form_dropdown('is_featured', array(0 => 'No', 1 => 'Yes'), $item->is_featured); ?>
+                                      <?//= form_input('title', $item->title, 'class="required" title="Product Title" rel="tooltip" data-placement="right"'); ?>
+                                  </div>
                               </div>
 
                             </div>

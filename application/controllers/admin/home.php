@@ -22,8 +22,7 @@ class Home extends Auth
 
     function index()
     {
-        $data = array();
-        Page::factory('admin/home/dashboard', $data)->render();
+        redirect('admin/products');
     }
 
     function dashboard()

@@ -161,7 +161,7 @@ class Categories extends Auth
 
         $item = $this->categories_model->get($id);
         $this->categories_model->delete($id);
-        $message = "Category deleted : $item->title";
+        $message = "Category deleted";
         $this->session->set_flashdata('message', $message);
         redirect('/admin/categories');
     }
