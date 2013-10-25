@@ -1,1 +1,1 @@
-A sample CMS project for eCommerce platform
+A sample CMS project for an eCommerce platform
